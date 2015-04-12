@@ -3,13 +3,14 @@ package monroe.games.monopoly.model;
 import java.util.ArrayList;
 
 public class Board {
-	ArrayList<Player> players;
-	Banker banker;
-	ArrayList<MonopolyListener> listeners;
-	Player currentTurn;
+	private ArrayList<Player> players;
+	private Banker banker;
+	private ArrayList<MonopolyListener> listeners;
+	private Player currentTurn;
+	private ArrayList<Space> board;
 //	ArrayList<String> communityChest;
 //	ArrayList<String> chance;
-	public Board(ArrayList<String> playerNames) {
+	public Board(ArrayList<String> playerNames, String initFile) {
 		players = new ArrayList<>();
 		for (String s:playerNames) {
 			int startingMoney = 1500;
@@ -20,7 +21,12 @@ public class Board {
 		
 		int startingHouses = 32;
 		int startingHotels = 12;
-		banker = new Banker(null, 32, 12); //TODO: build property list
+		board = buildBoard(initFile);
+		banker = new Banker(null, startingHouses, startingHotels); //TODO: build property list
+	}
+	private ArrayList<Space> buildBoard(String initFile) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	public Board(ArrayList<Player> players, Banker banker) {
 		super();

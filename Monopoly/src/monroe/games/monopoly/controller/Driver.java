@@ -10,6 +10,9 @@ public class Driver {
 	public static void main(String[] args) {
 		ArrayList<String> players = new ArrayList<>();
 		players.add("Alex");
-		Controller game = new Controller(new Board(players), new ASCIIView());
+		players.add("Julia");
+		String initFile = "simple.ini";
+		Controller game = new Controller(new Board(players, initFile), new ASCIIView());
+		game.gameLoop();
 	}
 }
