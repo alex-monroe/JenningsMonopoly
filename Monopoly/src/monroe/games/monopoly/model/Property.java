@@ -11,7 +11,6 @@ public class Property {
 	
 	private boolean hasHotel;
 	private boolean isMortgaged;
-	//private int isOwned; <--refactor this into board class?
 	public Property(String name, int cost, int baseRent, int mortgageValue,
 			int numHouses, int buildingCost, boolean hasHotel,
 			boolean isMortgaged) {
