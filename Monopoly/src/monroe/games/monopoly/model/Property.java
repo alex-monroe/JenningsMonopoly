@@ -1,6 +1,6 @@
 package monroe.games.monopoly.model;
 
-public class Property {
+public class Property implements Space{
 	private String name;
 	
 	private int cost;
@@ -56,6 +56,10 @@ public class Property {
 	}
 	public void setMortgaged(boolean isMortgaged) {
 		this.isMortgaged = isMortgaged;
+	}
+	@Override
+	public boolean isBuyable() {
+		return true;
 	}
 	
 }
