@@ -30,4 +30,13 @@ public class Banker {
 	public void setHotels(int hotels) {
 		this.hotels = hotels;
 	}
+	
+	public boolean hasProperty(Space s) {
+		for (Property p:this.properties) {
+			if (p.equals(s)) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

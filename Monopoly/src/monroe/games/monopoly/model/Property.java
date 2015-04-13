@@ -5,19 +5,29 @@ public class Property implements Space{
 	
 	private int cost;
 	private int baseRent;
+	private int rent1; //rent with 1 house
+	private int rent2;
+	private int rent3;
+	private int rent4;
+	private int rentHotel; //rent with a hotel
 	private int mortgageValue;
 	private int numHouses;
 	private int buildingCost;
 	
 	private boolean hasHotel;
 	private boolean isMortgaged;
-	public Property(String name, int cost, int baseRent, int mortgageValue,
+	public Property(String name, int cost, int baseRent, int rent1, int rent2, int rent3, int rent4, int rentHotel, int mortgageValue,
 			int numHouses, int buildingCost, boolean hasHotel,
 			boolean isMortgaged) {
 		super();
 		this.name = name;
 		this.cost = cost;
 		this.baseRent = baseRent;
+		this.rent1 = rent1;
+		this.rent2 = rent2;
+		this.rent3 = rent3;
+		this.rent4 = rent4;
+		this.rentHotel = rentHotel;
 		this.mortgageValue = mortgageValue;
 		this.numHouses = numHouses;
 		this.buildingCost = buildingCost;

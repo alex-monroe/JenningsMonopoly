@@ -11,7 +11,7 @@ public class Driver {
 		ArrayList<String> players = new ArrayList<>();
 		players.add("Alex");
 		players.add("Julia");
-		String initFile = "simple.ini";
+		String initFile = "C:\\Users\\Alex\\Documents\\Java Programs\\monopoly_board.ini";
 		Controller game = new Controller(new Board(players, initFile), new ASCIIView());
 		game.gameLoop();
 	}

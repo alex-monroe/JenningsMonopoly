@@ -10,17 +10,18 @@ public class Controller {
 	private Board model;
 	private MonopolyView view;
 	
-	public Controller(Board model, MonopolyView view) {
-		this.model = model;
+	public Controller(Board modelParam, MonopolyView view) {
+		this.model = modelParam;
 		this.view = view;
 		MonopolyListener myListener = new MonopolyListener() {
 			public void playerMoved(Player p) {
+				view.displayResult(p, model.spacePlayerIsOn(p));
 				if (model.onUnownedProperty(p)) {
-					Property inQuestion = model.propertyThatPlayerIsOn(p);
-					boolean answer = view.askToBuy(p, inQuestion);
-					if (answer) {
-						model.playerBuysProperty(p, inQuestion);
-					}
+//					Property inQuestion = model.propertyThatPlayerIsOn(p);
+//					boolean answer = view.askToBuy(p, inQuestion);
+//					if (answer) {
+//						model.playerBuysProperty(p, inQuestion);
+//					}
 				}
 			}
 		};
@@ -28,7 +29,8 @@ public class Controller {
 	}
 	
 	public void gameLoop() {
-		while (model.playersStillAlive()) {
+//		while (model.playersStillAlive()) {
+		for (int i = 0; i < 5; i++) {
 			model.move(model.whosTurn());
 
 		}
