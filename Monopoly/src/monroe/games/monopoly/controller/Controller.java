@@ -16,12 +16,12 @@ public class Controller {
 		MonopolyListener myListener = new MonopolyListener() {
 			public void playerMoved(Player p) {
 				view.displayResult(p, model.spacePlayerIsOn(p));
-				if (model.onUnownedProperty(p)) {
-//					Property inQuestion = model.propertyThatPlayerIsOn(p);
-//					boolean answer = view.askToBuy(p, inQuestion);
-//					if (answer) {
-//						model.playerBuysProperty(p, inQuestion);
-//					}
+				if (model.onUnownedProperty(p) && model.spacePlayerIsOn(p) instanceof Property) {
+					Property inQuestion = (Property) model.spacePlayerIsOn(p);
+					boolean answer = view.askToBuy(p, inQuestion);
+					if (answer) {
+						model.playerBuysProperty(p, inQuestion);
+					}
 				}
 			}
 		};

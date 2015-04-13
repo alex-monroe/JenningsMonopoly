@@ -15,15 +15,7 @@ public class Player {
 		this.getOutOfJailFreeCards = getOutOfJailFreeCards;
 		this.position = position;
 		this.turnOver = true;
-	}
-	public Player(ArrayList<Property> properties, int money,
-			int getOutOfJailFreeCards, int position, boolean turnOver) {
-		super();
-		this.properties = properties;
-		this.money = money;
-		this.getOutOfJailFreeCards = getOutOfJailFreeCards;
-		this.position = position;
-		this.turnOver = turnOver;
+		this.properties = new ArrayList<>();
 	}
 	public String getName() {
 		return this.name;
